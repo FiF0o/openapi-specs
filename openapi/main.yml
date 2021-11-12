@@ -1,0 +1,29 @@
+openapi: "3.0.1"
+info:
+  version: "${npm_package_version}"
+  title: "${npm_package_name}"
+  description: >-
+    Example of modular API specs
+  contact:
+    email: someone@mail.com
+tags:
+  - name: foo
+    description: bar
+
+paths:
+  /app/something:
+    get:
+      description: returns some things
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: './components/something.yml#/components/schemas/Something'
+                type: array
+          description: 200 response
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string

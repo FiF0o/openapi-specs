@@ -1,0 +1,16 @@
+{
+  "name": "openapi-specs",
+  "version": "1.0.0",
+  "description": "POC for open api specs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "openapi:generate:interfaces": "npx openapi-typescript ./openapi/components/something.yml --output ./dist/components/something.ts",
+    "openapi:generate:all": "npx openapi-typescript main.yml --output dist/main.ts",
+    "openapi:lint": "echo 'implement lint'",
+    "openapi:create": "npx speccy resolve openapi/main.yml -o ./dist/megaspec.yml",
+    "clean": "rm -rf dist/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

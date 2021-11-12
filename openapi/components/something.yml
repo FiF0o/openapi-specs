@@ -1,0 +1,22 @@
+openapi: "3.0.1"
+info:
+  version: "${npm_package_version}"
+  title: "${npm_package_version}"
+components:
+  schemas:
+    Something:
+      type: object
+      required:
+        - id
+        - username
+      properties:
+        id:
+          type: integer
+        username:
+          type: string
+        number:
+          type: number
+          example: 1
+        someInterpolatedKey: 
+          type: string
+          example: "${foo}"
